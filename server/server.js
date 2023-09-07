@@ -1,6 +1,7 @@
 const express = require('express') 
 const app = express() 
 const cors = require('cors')
+const path = require('path')
 
 const fs = require("fs") 
 // Load data from JSON file into memory
@@ -10,6 +11,7 @@ const data = JSON.parse(rawData)
 app.use(cors())
 app.use(express.json()) 
 app.use(express.static('build'))
+
 
 app.get('/', (req, res) => {
   res.send('<h1>This is Home page</h1>')
@@ -165,6 +167,8 @@ app.get('/api/orders', (req, res) => {
 
 
 const PORT = 3001
+
+
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`)
 })

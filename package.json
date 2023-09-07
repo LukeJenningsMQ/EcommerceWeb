@@ -50,5 +50,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "proxy": "http://localhost:3001"
+  "proxy": "individualproject-azure-app.azurewebsites.net"
 }
