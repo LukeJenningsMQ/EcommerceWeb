@@ -50,5 +50,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "proxy": "individualproject-azure-app.azurewebsites.net"
+  "proxy": "https://individualproject-azure-app.azurewebsites.net"
 }
