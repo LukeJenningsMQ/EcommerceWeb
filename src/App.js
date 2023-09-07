@@ -31,7 +31,7 @@ function App() {
       if (session !== null) {
         // This will only run if session is not null
         console.log("Updated session:", session);
-        const userurl = '/api/users/' + session.user_id
+        const userurl = 'https://individualproject-azure-app.azurewebsites.net/api/users/' + session.user_id
         axios.get(userurl)
           .then((response) => {
           console.log("response: ", response.data)
