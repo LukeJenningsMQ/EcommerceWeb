@@ -1,0 +1,294 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.Navigation{
+  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px; 
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.productContainer {
+  border: 1px solid #e0e0e0;
+    width: 250px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-decoration: none;
+}
+.productContainer:hover {
+  transform: translateY(-10px);
+}
+.productImage {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.PageImage{
+  width: 100%;
+  object-position: top;
+  max-height: 75%;
+  object-fit: contain;
+}
+
+.productTitle {
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  background-color: #f9f9f9;
+}
+.productsDisplay {
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px; 
+}
+.productPageDisplay{
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;  
+    max-width: 1200px;  
+    margin: 0 auto; 
+    padding: 20px;  
+}
+nav li {
+  text-decoration: none; /* Remove the underline */
+  padding: 10px 20px; /* Add some padding around the text */
+  border: 1px solid #333; /* Add a border */
+  border-radius: 5px; /* Round the corners a little */
+  background-color: #f4f4f4; /* A light grey background */
+  color: #333; /* Text color */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+nav li.log {
+  text-decoration: none; /* Remove the underline */
+  padding: 10px 20px; /* Add some padding around the text */
+  border: 1px solid #282c34;; /* Add a border */
+  border-radius: 5px; /* Round the corners a little */
+  background-color: #282c34;
+  color: white; /* Text color */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+Link{
+  text-decoration: none; /* Remove the underline */
+}
+nav ul{
+  list-style-type: none;
+}
+/* A hover effect to give feedback when mousing over the 'buttons' */
+nav li:hover {
+  background-color: #333; /* Darker background on hover */
+  color: #f4f4f4; /* Light text on hover */
+}
+nav li.log:hover {
+  background-color: #282c34; /* Darker background on hover */
+  color: white; /* Light text on hover */
+}
+.Banner img {
+    max-width: 50%; /* Ensure the logo doesn't overflow the viewport */
+    height: auto;
+}
+.Banner{
+  margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center content horizontally */
+    align-items: center;     /* Center content vertically */
+   }
+.leftCol {
+  padding: 10px;
+}
+.rightCol {
+  padding: 10px;
+  text-align: left;
+}
+footer{
+  color: white;
+  background-color:  #282c34;
+  padding: 20px;
+}
+.shopForm input{
+  margin: 10px;
+}
+.shopForm button{
+    text-decoration: none; /* Remove the underline */
+    padding: 10px 20px; /* Add some padding around the text */
+    border: 1px solid #333; /* Add a border */
+    border-radius: 5px; /* Round the corners a little */
+    background-color: #f4f4f4; /* A light grey background */
+    color: #333; /* Text color */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.shopForm button:hover {
+  background-color: #333; /* Darker background on hover */
+  color: #f4f4f4; /* Light text on hover */
+}
+.SubmitOrder button{
+  text-decoration: none; /* Remove the underline */
+    padding: 10px 20px; /* Add some padding around the text */
+    border: 1px solid #333; /* Add a border */
+    border-radius: 5px; /* Round the corners a little */
+    background-color: #f4f4f4; /* A light grey background */
+    color: #333; /* Text color */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    margin: 10px;
+}
+.SubmitOrder button:hover {
+  background-color: #333; /* Darker background on hover */
+  color: #f4f4f4; /* Light text on hover */
+}
+
+.shoppingCart {
+  color: black;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cartItem {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.cartItem:last-child {
+  border-bottom: none;
+}
+
+.cartItem .itemName {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.cartItem .itemCost {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.cartItem p {
+  margin: 5px 0;
+}
+
+.cartItem button, .cartItem form button {
+  padding: 5px 10px;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007BFF;
+  color: #fff;
+  cursor: pointer;
+}
+
+.cartItem .removeItem {
+  background-color: #dc3545;
+}
+
+.cartItem input{
+  margin: 10px;
+}
+
+.cartItem form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cartItem form div {
+  display: flex;
+  align-items: center;
+}
+
+.cartItem form label {
+  margin-right: 10px;
+}
+
+.cartItem form input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.cartItem button:hover, .cartItem form button:hover {
+  opacity: 0.8;
+}
+
+.orderContainer{
+    border: 1px solid black;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #f9f9f9;
+    color: black;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;  
+    max-width: 1200px;  
+    padding: 20px;  
+    margin-bottom: 20px;
+}
+.orderContainer h2{
+  margin: 0 0 10px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.orderDetails{
+  margin-bottom: 20px;
+}
+.orderDetails p{
+  margin: 5px 0;
+}
+
+.orderContainer .orderItems{
+  margin-bottom: 20px;
+  border-left: 2px solid grey;
+  padding-left: 10px;
+}
+.orderContainer .orderItems .item {
+  margin: 10px 0;
+}
+.orderContainer .orderItems .item p{
+    margin: 5px 0;
+}
+.categorySelector {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+.categorySelector p {
+  margin: 0 10px 0 0;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+.categorySelector select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  color: #495057;
+  background-color: #fff;
+  appearance: none;
+  cursor: pointer;
+}
