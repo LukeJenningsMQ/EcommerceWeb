@@ -38,7 +38,7 @@ const Home = () => {
         case 'All':
           return fetchProducts(baseurl)
         default:
-          return fetchProducts('/api/products?category=' + event.target.value)
+          return fetchProducts('https://individualproject-azure-app.azurewebsites.net/api/products?category=' + event.target.value)
       }
     };
    
