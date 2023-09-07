@@ -5,7 +5,7 @@ const path = require('path')
 
 const fs = require("fs") 
 // Load data from JSON file into memory
-const rawData = fs.readFileSync("server/sampledata.json")
+const rawData = fs.readFileSync("./sampledata.json")
 const data = JSON.parse(rawData)
 console.log(data);
 
