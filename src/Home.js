@@ -7,7 +7,7 @@ const Home = () => {
 
     const [products, setProducts] = useState([])
     const [categories, setCategories] = useState([])
-    const baseurl = 'https://individualproject-azure-app.azurewebsites.net/api/products'
+    const baseurl = '/api/products'
   
   
     const fetchProducts = (urlUsed) => {
@@ -19,7 +19,7 @@ const Home = () => {
     }
 
     const fetchCategories = () => {
-      const cateurl = 'https://individualproject-azure-app.azurewebsites.net/api/categories'
+      const cateurl = '/api/categories'
       axios.get(cateurl)
       .then((response) => {
         console.log("response: ", response.data)
@@ -38,7 +38,7 @@ const Home = () => {
         case 'All':
           return fetchProducts(baseurl)
         default:
-          return fetchProducts('https://individualproject-azure-app.azurewebsites.net/api/products?category=' + event.target.value)
+          return fetchProducts('/api/products?category=' + event.target.value)
       }
     };
    
