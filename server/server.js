@@ -7,6 +7,7 @@ const fs = require("fs")
 // Load data from JSON file into memory
 const rawData = fs.readFileSync("server/sampledata.json")
 const data = JSON.parse(rawData)
+console.log(data);
 
 app.use(cors())
 app.use(express.json()) 
@@ -174,6 +175,11 @@ const PORT = process.env.PORT || 3001;
 
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../build/index.html'));
+});
+
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send('Something broke!');
 });
 
 app.listen(PORT, () => {
