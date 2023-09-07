@@ -11,7 +11,9 @@ const data = JSON.parse(rawData)
 app.use(cors())
 app.use(express.json()) 
 app.use(express.static('build'))
-
+app.get("*", (req,res) => {
+  res.sendFile(path.resolve("build", "index.html"))
+})
 
 app.get('/', (req, res) => {
   res.send('<h1>This is Home page</h1>')
