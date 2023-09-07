@@ -11,7 +11,7 @@ function App() {
   const [session, setSession] = useState(null)
   const [userInfo, setUserInfo] = useState([])
 
-    const baseurl = '/api/session'
+    const baseurl = 'https://individualproject-azure-app.azurewebsites.net/api/session'
      
   
     const fetchSession = () => {

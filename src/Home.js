@@ -7,7 +7,7 @@ const Home = () => {
 
     const [products, setProducts] = useState([])
     const [categories, setCategories] = useState([])
-    const baseurl = '/api/products'
+    const baseurl = 'https://individualproject-azure-app.azurewebsites.net/api/products'
   
   
     const fetchProducts = (urlUsed) => {
@@ -19,7 +19,7 @@ const Home = () => {
     }
 
     const fetchCategories = () => {
-      const cateurl = '/api/categories'
+      const cateurl = 'https://individualproject-azure-app.azurewebsites.net/api/categories'
       axios.get(cateurl)
       .then((response) => {
         console.log("response: ", response.data)
