@@ -10,10 +10,14 @@ const data = JSON.parse(rawData)
 
 app.use(cors())
 app.use(express.json()) 
-app.use(express.static('build'))
-app.get("*", (req,res) => {
-  res.sendFile(path.resolve("build", "index.html"))
-})
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, '../build')));
+
+// The "catchall" handler: for any request that doesn't
+// match one above, send back React's index.html file.
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../build/index.html'));
+});
 
 app.get('/', (req, res) => {
   res.send('<h1>This is Home page</h1>')
@@ -168,7 +172,7 @@ app.get('/api/orders', (req, res) => {
 
 
 
-const PORT = 3001
+const PORT = process.env.PORT || 3001;
 
 
 app.listen(PORT, () => {
